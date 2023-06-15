@@ -1,6 +1,6 @@
 # sprint-grupal-6
 
-#Usuario admin:
+# Usuario admin:
 
 username: admin
 contraseña: admin123
