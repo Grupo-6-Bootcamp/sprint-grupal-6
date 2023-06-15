@@ -5,12 +5,40 @@
 {% block body %} 
 {% if user.is_authenticated %}
 <img class = "img-titulo" src="{% static 'assets/imagenes/tlv.png' %}" alt="telovendoasdasa">
-<h1 class="title titulo">Bienvenido a Telovendo</h1> 
+<h1 id="bienvenida" class="title titulo">¡Que gusto verte! {{ user }} </h1>
+
+<h2>Noticias</h2>
+<div class="card-group noticias">
+    <div class="card noticia">
+      <img src="https://placedog.net/640/480?r" class="card-img-top" alt="noticia 1">
+        <div class="card-body">
+            <h5 id="titular" class="card-title">Noticia 1</h5>
+            <p id="cuerpo" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui eveniet dignissimos, numquam amet vitae neque rerum necessitatibus quis itaque optio excepturi placeat velit expedita hic error alias repellat saepe eaque voluptates officiis adipisci accusantium doloremque! Explicabo laboriosam illo porro quaerat!</p>
+            
+        </div>
+    </div>
+    <div class="card noticia">
+      <img src="https://placedog.net/640/480?r" class="card-img-top" alt="noticia 2">
+        <div class="card-body">
+            <h5 id="titular" class="card-title">Noticia 2</h5>
+            <p id="cuerpo" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi eius quam tempora perferendis dicta ex!</p>
+            
+        </div>
+    </div>
+    <div class="card noticia">
+      <img src="https://placedog.net/640/480?r" class="card-img-top" alt="noticia 3">
+        <div class="card-body">
+            <h5 id="titular" class="card-title">Noticia 3</h5>
+            <p id="cuerpo" class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem minima repellendus animi distinctio iusto beatae? Deserunt voluptates aliquam quas ipsam laudantium nemo libero similique sit quo pariatur, quasi totam commodi?</p>
+            
+        </div>
+    </div>
+</div>
+
+
+
 {% else %}
 <img class = "img-titulo" src="{% static 'assets/imagenes/tlv.png' %}" alt="telovendoasdasa">
-
-
-
 
 
 <div id="carouselExampleCaptions" class="carousel slide">
@@ -21,21 +49,21 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active my-auto">
-        <img src="http://placekitten.com/200/200" class="d-block w-auto mx-auto my-auto" alt="...">
+        <img src="http://placekitten.com/200/200?r" class="d-block w-auto mx-auto my-auto" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="titulo-carousel" >Gatito 1</h5>
           <p class="texto-carousel">Some representative placeholder content for the first slide.</p>
         </div>
       </div>
       <div class="carousel-item my-auto">
-        <img src="http://placekitten.com/200/300" class="d-block w-auto mx-auto my-auto" alt="...">
+        <img src="http://placekitten.com/200/300?r" class="d-block w-auto mx-auto my-auto" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="titulo-carousel">Gatito 2</h5>
           <p class="texto-carousel">Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item my-auto">
-        <img src="http://placekitten.com/300/200" class="d-block w-auto mx-auto my-auto" alt="...">
+        <img src="http://placekitten.com/300/200?r" class="d-block w-auto mx-auto my-auto" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5 class="titulo-carousel">Gatito 3</h5>
           <p class="texto-carousel">Some representative placeholder content for the third slide.</p>

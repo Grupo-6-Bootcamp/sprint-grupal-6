@@ -8,5 +8,4 @@ urlpatterns = [
     path('formulario/', views.CrearProveedorView.as_view(),
          name='registro_proveedores'),
     path('proveedores/', views.ProveedoresView.as_view(), name='proveedores'),
-    path('indexp/', views.IndexPageView.as_view(), name='homeprivado'),
 ]

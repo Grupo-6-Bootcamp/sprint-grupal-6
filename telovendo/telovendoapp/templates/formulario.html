@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 {% block title %}TeLoVendo - Clientes{% endblock %}
 
-    {% block body %}  
-    <h1 class="titulo">Registro de Proveedores</h1>
-    <div class="form-group">
+{% block body %}
+    <div class="form-contentr">
+    <div class="form-container formreg">
+    <h1 class="tituloreg">Registro de Proveedores</h1>
+    <div class="form-group reg">
         <form action="" method="post">{% csrf_token %}
-            {{ form.as_p }}
-            <input type="submit" value="Regístrate" class="btn btn-primary">
+            {% for campo in form %}
+            <label class="form-label"> {{ campo.label}}: </label>
+            <input class="form-control"> {{ campo.fields}} </input>
+            {% endfor %}
+            <input type="submit" value="Añadir" class="r btn botoncito ">
         </form>
+        </div>
     </div>
+</div>
+
     {% endblock %}

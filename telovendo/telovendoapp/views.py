@@ -10,6 +10,9 @@ from django.utils.decorators import method_decorator
 def index(request):
     return render(request, "index.html")
 
+
+
+@login_required
 def clients(request):
     clientes = [
         {
@@ -55,6 +58,7 @@ def clients(request):
     ]
     return render(request, "clients.html", {"clientes": clientes})
 
+@method_decorator(login_required, name='dispatch')
 class CrearProveedorView(View):
     template_name = "formulario.html"
 
@@ -72,7 +76,7 @@ class CrearProveedorView(View):
             context = {'form': form}
             return render(request, 'formulario.html', context)
 
-
+@method_decorator(login_required, name='dispatch')
 class ProveedoresView(TemplateView):
     template_name = "proveedores.html"
 
@@ -87,7 +91,7 @@ class IndexPageView(TemplateView):
     template_name = "indexp.html"
 
     def get(self, request):
-        return render(request, "indexp.html")
+        return render(request, "index.html")
 
     def post(self, request):
-        return render(request, "indexp.html")
+        return render(request, "index.html")
